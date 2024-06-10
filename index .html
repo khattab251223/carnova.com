@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carnova - مغسلة السيارات الإلكترونية</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- Moving Banner Section -->
+<section class="moving-banner">
+  <h1 class="animated-text">Created by <span class="animated-name">Abdallah Khattab</span></h1>
+</section>
+<input type="text" id="searchInput" placeholder="ابحث عن المنتج...">
+  <button onclick="searchProduct()">ابحث</button>
+  
+  <script>
+  function searchProduct() {
+    var searchValue = document.getElementById("searchInput").value.toLowerCase();
+    var products = [
+      { name: "منتج 1", available: true, link: "product1.html" },
+      { name: "منتج 2", available: false },
+      { name: "منتج 3", available: true, link: "product3.html" }
+    ];
+  
+    var foundProduct = products.find(product => product.name.toLowerCase() === searchValue);
+  
+    if (foundProduct) {
+      if (foundProduct.available) {
+        // إذا كان المنتج متاحًا، قم بتوجيه المستخدم إلى صفحة المنتج
+        window.location.href = foundProduct.link;
+      } else {
+        alert("ا ياعم لمنتج غير متوفر.");
+        // إذا كان المنتج غير متاح، قم بتوجيه المستخدم إلى صفحة الحجوزات
+        window.location.href = "booking.html";
+      }
+    } else {
+      alert(" ياعم المنتج غير متوفر.");
+      // إذا لم يتم العثور على المنتج، قم بتوجيه المستخدم إلى صفحة الحجوزات
+      window.location.href = "booking.html";
+    }
+  }
+  </script>
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="#" class="logo">Carnova</a>
+  <ul class="nav-links">
+    <li><a href="index .html">الرئيسية</a></li>
+    <li><a href="servies.html">الخدمات</a></li>
+    <li><a href="Reservations.html">حجوزات</a></li>
+    <li><a href="products.html">منتجات</a></li>
+    <li><a href="About us.html">عنّا</a></li>
+    <li><a href="call us.html">اتصل بنا</a></li>
+    <li><a href="Enquiry.html"> استعلم عن طلبك</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>carnova مرحبا بك في  </h1>
+    <p>تجربة فريدة من نوعها لغسيل بأحدث التقنيات.</p>
+    <a href="call us.html" class="btn btn-primary">احجز الآن</a>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+  <h2>خدماتنا</h2>
+  <div class="service-card">
+    <img src="https://telooa.com/wp-content/uploads/2023/01/%D8%B4%D8%B1%D9%83%D8%A7%D8%AA-%D8%BA%D8%B3%D9%8A%D9%84-%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA.jpg" alt="غسيل السيارات">
+    <h3>غسيل السيارات</h3>
+    <p>خدمة غسيل السيارات بأحدث المعدات والمنتجات.</p>
+  </div>
+  <div class="service-card">
+    <img src="https://i.ytimg.com/vi/y6N18v-mRJY/maxresdefault.jpg" alt="تلميع السيارات">
+    <h3>تلميع السيارات</h3>
+    <p>تلميع سيارتك بأفضل المنتجات لإعادة لمعانها.</p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+  <div class="container">
+    <h2>عنّا</h2>
+    <p>نحن شركة كارنوفا اول شركه مغسله سيارات بدون مياه وتوفير المنتجات .</p>
+  </div>
+</section>
+
+<!-- Booking Section -->
+<section class="booking">
+  <div class="container">
+    <h2>حجز موعد</h2>
+    <form>
+      <input type="text" placeholder="اسمك">
+      <input type="email" placeholder="بريدك الإلكتروني">
+      <input type="text" placeholder="نوع السيارة">
+      <input type="date" placeholder="تاريخ الحجز">
+      <button type="submit">احجز الآن</button>
+    </form>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="products">
+  <h2>منتجاتنا</h2>
+  <div class="product-card">
+    <img src="https://cdnb.artstation.com/p/assets/images/images/040/021/687/large/professional-design-e5kyhxtxoaaospx.jpg?1627614975" alt="منتج 1">
+    <h3>منتج 1</h3>
+    <p>خليك ف حالك.</p>
+    <a href="#" class="btn btn-secondary">شراء الآن</a>
+  </div>
+  <div class="product-card">
+    <img src="https://www.salla.ps/wp-content/uploads/2020/09/g201316_ultleatherdetailer_web.png" alt="منتج 2">
+    <h3>منتج 2</h3>
+    <p>معرفش</p>
+    <a href="#" class="btn btn-secondary">شراء الآن</a>
+  </div>
+  <div class="product-card">
+    <img src="https://www.luluhypermarket.com/medias/58278-01.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxNDI5ODR8aW1hZ2UvanBlZ3xoMTMvaGY0LzEyMDMzNDM5MjY4ODk0LzU4Mjc4LTAxLmpwZ18xMjAwV3gxMjAwSHxmYzU4NjA4NzA0NTg2NzM4OGU1MTc5ZDUwNGJiNDgzNDg3NzU0YjI5ZTMyZDdmYzJlYzNlZGYyYTcwYWNkNzU5" alt="منتج 3" >
+    <h3>منتج 3</h3>
+    <p>احلى مسا على اللي بيتفرج </p>
+    <a href="#" class="btn btn-secondary">شراء الآن</a>
+  </div>
+</section>
+<!-- Steps Section -->
+<section class="steps">
+  <div class="container">
+    <h2>خطوات غسيل السيارات بدون ماء</h2>
+    <div class="step">
+      <h3>1. التنظيف الجاف</h3>
+      <p>استخدم فرشاة ناعمة وقطعة قماش جافة لإزالة الأتربة والأوساخ السطحية.</p>
+    </div>
+    <div class="step">
+      <h3>2. الرش بالمنظف</h3>
+      <p>رش المنظف المخصص للغسيل الجاف على سطح السيارة واتركه لبضع دقائق ليعمل.</p>
+    </div>
+    <div class="step">
+      <h3>3. التنظيف بالاجهزه الخاصه</h3>
+      <p>يمسح السطح ببطء باستخدام الجهاز  لإزالة الأوساخ وبقايا المنظف.</p>
+    </div>
+    <div class="step">
+      <h3>4.التلميع</h3>
+      <p>استخدم منتج تلميع لإعادة لمعان السيارة وجعلها تبدو كأنها جديدة.</p>
+    </div>
+    <div class="step">
+      <h3>5. التشطيب</h3>
+      <p>قم بتلميع النوافذ وتنظيف الجنوط لإكمال عملية التنظيف.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Payment Section -->
+<section class="payment">
+  <div class="container">
+    <h2>الدفع</h2>
+    <form>
+      <div class="payment-method">
+        <input type="radio" id="visa" name="payment" value="visa">
+        <label for="visa">Visa</label>
+      </div>
+      <div class="payment-method">
+        <input type="radio" id="mastercard" name="payment" value="mastercard">
+        <label for="mastercard">MasterCard</label>
+      </div>
+      <div class="payment-method">
+        <input type="radio" id="paypal" name="payment" value="paypal">
+        <label for="paypal">PayPal</label>
+      </div>
+      <div class="payment-method">
+        <input type="radio" id="cash" name="payment" value="cash">
+        <label for="cash">الدفع نقدًا</label>
+      </div>
+      <button type="submit">إتمام الدفع</button>
+    </form>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <h2>آراء العملاء</h2>
+  <div class="testimonial-card">
+    <p>"أفضل خدمة غسيل وصيانة سيارات جربتها على الإطلاق. أوصي بها بشدة!"</p>
+    <h3>محمد علي</h3>
+  </div>
+  <div class="testimonial-card">
+    <p>"فريق محترف وأداء عالي. سيارتي تبدو جديدة تمامًا بعد الخدمة."</p>
+    <h3>أحمد حسن</h3>
+  </div>
+  <div class="testimonial-card">
+    <p>"تجربة رائعة وسهولة في الحجز عبر الموقع. سأعود بالتأكيد."</p>
+    <h3>عبدالله خطاب</h3>
+  </div>
+</section>
+<!-- Dynamic Testimonials Section -->
+<section class="dynamic-testimonials">
+  <div class="container">
+    <h2>شهادات العملاء</h2>
+    <div class="testimonial">
+      <p>"أفضل خدمة غسيل وصيانة سيارات جربتها على الإطلاق. أوصي بها بشدة!"</p>
+      <h3>محمد علي</h3>
+    </div>
+    <div class="testimonial">
+      <p>"فريق محترف وأداء عالي. سيارتي تبدو جديدة تمامًا بعد الخدمة."</p>
+      <h3>أحمد حسن</h3>
+    </div>
+    <div class="testimonial">
+      <p>"تجربة رائعة وسهولة في الحجز عبر الموقع. سأعود بالتأكيد."</p>
+      <h3>عبدالله خطاب</h3>
+    </div>
+  </div>
+</section>
+<!-- Introduction Video Section -->
+<section class="intro-video">
+  <div class="container">
+    <h2>فيديو تعريفي</h2>
+    <div class="video-wrapper">
+      <video controls>
+        <source src="videos/carnova.mp4" type="video/mp4" >
+      
+    </div>
+    <p>شاهد الفيديو لتتعرف على خدماتنا المميزة وكيفية عملنا.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+  <div class="container">
+    <h2>اتصل بنا</h2>
+    <form>
+      <input type="text" placeholder="اسمك">
+      <input type="email" placeholder="بريدك الإلكتروني">
+      <textarea placeholder="رسالتك"></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <p>&copy; 2024 Carnova. جميع الحقوق محفوظة.</p>
+</footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+<!-- Additional Sections -->
+<!-- News and Articles Section -->
+<section class="news">
+  <h2>الأخبار والمقالات</h2>
+  <a href="news.html" class="btn btn-secondary">تعرف على المزيد</a>
+</section>
+
+
+<!-- Offers and Discounts Section -->
+<section class="offers">
+  <h2>العروض والتخفيضات</h2>
+  <a href="offers.html" class="btn btn-secondary">تعرف على المزيد</a>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq">
+  <h2>الأسئلة الشائعة</h2>
+  <a href="what.html" class="btn btn-secondary">تعرف على المزيد</a>
+</section>
+
+<!-- Contact Us Section -->
+<section class="contact-us">
+  <h2>تواصل معنا</h2>
+  <a href="call us.html" class="btn btn-secondary">تعرف على المزيد</a>
+</section>
+
+<!-- Newsletter Subscription Section -->
+<section class="newsletter">
+  <h2>الاشتراك في النشرة الإخبارية</h2>
+  <a href="subscribe.html" class="btn btn-secondary">تعرف على المزيد</a>
+</section>
+
+<!-- Instructional Videos Section -->
+<section class="videos">
+  <h2>مقاطع الفيديو التوضيحية</h2>
+  <a href="carnova.mp4" class="btn btn-secondary">تعرف على المزيد</a>
+</section>
+
+
+<section class="faq">
+  <div class="container">
+    <h2>الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>ما هي ساعات العمل لديكم؟</h3>
+      <p>نحن نعمل من الأحد إلى الخميس من الساعة 9 صباحًا حتى 6 مساءً.</p>
+    </div>
+    <div class="faq-item">
+      <h3>هل تقدمون خدمات غسيل السيارات اون لاين؟</h3>
+      <p>نعم، نقدم خدمة غسيل السيارات اون لاين باستخدام أحدث التقنيات.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما هي طرق الدفع المتاحة؟</h3>
+      <p>نقبل الدفع نقدًا، وبطاقات Visa وMasterCard، وPayPal.</p>
+    </div>
+    <div class="faq-item">
+      <h3>كيف يمكنني حجز موعد؟</h3>
+      <p>يمكنك حجز موعد عبر موقعنا الإلكتروني أو الاتصال بنا مباشرة.</p>
+    </div>
+  </div>
+</section>
+
+<script src="scripts.js"></script>
+<script>
+  document.querySelectorAll('.faq-item h3').forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentElement;
+      parent.classList.toggle('active');
+    });
+  });
+</script>
+<script>
+  const testimonials = document.querySelectorAll('.dynamic-testimonials .testimonial');
+  let currentTestimonial = 0;
+
+  function showNextTestimonial() {
+    testimonials[currentTestimonial].classList.remove('active');
+    testimonials[currentTestimonial].classList.add('exiting');
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    testimonials[currentTestimonial].classList.remove('exiting');
+    testimonials[currentTestimonial].classList.add('active');
+  }
+
+  setInterval(showNextTestimonial, 5000); // Change every 5 seconds
+
+  // Initialize the first testimonial
+  testimonials[currentTestimonial].classList.add('active');
+</script>
+
+</body>
+</html>
